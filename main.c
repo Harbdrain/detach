@@ -31,7 +31,7 @@ int convert(int num, char* buff, int buff_size) {
 }
 
 int main(int argc, char ** argv) {
-	// forks current process
+	// forks current process 1
 	pid_t pid = fork();
 	if (pid < 0)
 		return 1;
