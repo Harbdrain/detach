@@ -4,6 +4,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+// redirects ouptut
 void redirect(int fd, int flag) {
 	int nullfd = open("/dev/null", flag);
 	close(fd);
@@ -11,6 +12,8 @@ void redirect(int fd, int flag) {
 	close(nullfd);
 }
 
+
+// converts int into char array suitable for write(). Returns number length.
 int convert(int num, char* buff, int buff_size) {
 	buff += buff_size - 1;
 	*buff = '\0';
