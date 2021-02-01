@@ -4,7 +4,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-// redirects ouptut
+// redirects output
 void redirect(int fd, int flag) {
 	int nullfd = open("/dev/null", flag);
 	close(fd);
